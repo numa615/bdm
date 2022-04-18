@@ -5,7 +5,7 @@ import json
 def main(sc):
   items = 'keyfood_sample_items.csv'
   stores = 'keyfood_nyc_stores.json'
-  products = 'keyfood_products.csv'
+  products = '/tmp/bdm/keyfood_products.csv'
 
   # upc_name from items
   dfitems = spark.read.load(items, format='csv', header=True, inferSchema=True)
